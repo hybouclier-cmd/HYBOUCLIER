@@ -1,0 +1,11 @@
+{
+  "name": "HYBOUCLIER",
+  "short_name": "HYB",
+  "version": "0.3-dev",
+  "description": "Plateforme citoyenne locale-first HYBOUCLIER™",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": []
+}
