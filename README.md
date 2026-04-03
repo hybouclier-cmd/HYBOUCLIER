@@ -1,4 +1,6 @@
-# HYBOUCLIER
+# HYBOUCLIER  HYBOU, HYBOUCIER" Nom et logo en processus de protection toute utilisation non autorisée est interdite.
+
+
 Réseau social citoyen, local-first, éthique et non-commercial.
 
 ## ❤️ Le Cœur de HYBOUCLIER
