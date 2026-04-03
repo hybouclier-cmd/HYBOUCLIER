@@ -1,0 +1,22 @@
+async function savePage() {
+  const handle = await window.showSaveFilePicker({
+    suggestedName: "page.json",
+    types: [{ accept: { "application/json": [".json"] } } });
+
+  const writable = await handle.createWritable();
+  await writable.write(JSON.stringify({ nom: "Utilisateur", liens: [] }, null, 2));
+  await writable.close();
+
+  alert("Page sauvegardée !");
+}
+
+async function loadPage() {
+  const [handle] = await window.showOpenFilePicker();
+  const file = await handle.getFile();
+  const content = await file.text();
+
+  const data = JSON.parse(content);
+  console.log("Page chargée :", data);
+
+  alert("Page chargée ! Regarde la console.");
+}

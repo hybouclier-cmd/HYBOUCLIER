@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYBOUCLIER - Réseau Social Citoyen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Écran de bienvenue / Connexion -->
+        <div id="authScreen" class="screen">
+            <div class="auth-container">
+                <h1>🌱 HYBOUCLIER</h1>
+                <p class="tagline">Réseau social citoyen • Local • Privé • Humain</p>
+                
+                <!-- Vidéo YouTube de bienvenue -->
+                <div id="welcomeVideo" class="welcome-video">
+                    <iframe 
+                        id="youtubeFrame"
+                        width="100%" 
+                        height="315" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Choisir un pseudo" maxlength="20">
+                </div>
+                <button onclick="createOrLoadAccount()" class="btn btn-primary">Commencer</button>
+                <p class="info-text">✓ Aucune donnée n'est envoyée • ✓ Tout reste sur votre appareil</p>
+            </div>
+        </div>
+
+        <!-- Écran principal (après connexion) -->
+        <div id="mainScreen" class="screen hidden">
+            <aside class="sidebar">
+                <div class="profile-card">
+                    <div class="avatar" id="avatar">👤</div>
+                    <h2 id="profileName">Utilisateur</h2>
+                    <p id="joinDate">Inscrit</p>
+                    <button onclick="logout()" class="btn btn-small">Déconnexion</button>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" onclick="switchTab('feed')" class="nav-item active">
+                        📰 Fil d'actualité
+                    </a>
+                    <a href="#" onclick="switchTab('friends')" class="nav-item">
+                        👥 Amis
+                    </a>
+                    <a href="#" onclick="switchTab('profile')" class="nav-item">
+                        👤 Mon Profil
+                    </a>
+                    <a href="#" onclick="switchTab('settings')" class="nav-item">
+                        ⚙️ Paramètres
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <!-- Onglet: Fil d'actualité -->
+                <div id="feedTab" class="tab-content active">
+                    <div class="post-composer">
+                        <textarea id="postContent" placeholder="Partager vos pensées..." maxlength="500"></textarea>
+                        <button onclick="publishPost()" class="btn btn-primary">Publier</button>
+                    </div>
+                    <div id="feedContainer" class="feed">
+                        <!-- Les posts seront affichés ici -->
+                    </div>
+                </div>
+
+                <!-- Onglet: Amis -->
+                <div id="friendsTab" class="tab-content hidden">
+                    <div class="friends-container">
+                        <h2>Mes Amis sur HYBOUCLIER</h2>
+                        
+                        <div class="add-friend-section">
+                            <h3>📢 Ajouter un ami</h3>
+                            <div class="form-group">
+                                <input type="text" id="friendCode" placeholder="Entrez le code ami (ex: ALEX-ABC123)" maxlength="20">
+                                <button onclick="addFriendByCode()" class="btn btn-primary">Ajouter</button>
+                            </div>
+                        </div>
+
+                        <div class="share-friend-section">
+                            <h3>🔗 Mon Code Ami</h3>
+                            <div class="friend-code-display">
+                                <div class="code-box" id="myFriendCode">CHARGEMENT...</div>
+                                <button onclick="copyFriendCode()" class="btn btn-secondary">📋 Copier</button>
+                                <button onclick="shareFriendCode()" class="btn btn-secondary">📤 Partager</button>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="friends-list-section">
+                            <h3>👥 Mes amis (<span id="friendCount">0</span>)</h3>
+                            <div id="friendsList" class="friends-list">
+                                <p class="empty-message">Aucun ami encore. Commencez à en ajouter !</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="friends-feed-section">
+                            <h3>📰 Fil des amis</h3>
+                            <div id="friendsFeed" class="feed">
+                                <p class="empty-message">Aucun post de vos amis pour le moment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Onglet: Profil -->
+                <div id="profileTab" class="tab-content hidden">
+                    <div class="profile-section">
+                        <h2>Mon Profil</h2>
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label>Pseudo:</label>
+                                <input type="text" id="editUsername" placeholder="Votre pseudo" maxlength="20">
+                            </div>
+                            <div class="form-group">
+                                <label>Bio:</label>
+                                <textarea id="editBio" placeholder="Parlez de vous..." maxlength="250"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Emoji Profil:</label>
+                                <input type="text" id="editAvatar" placeholder="😊" maxlength="2">
+                            </div>
+                            <button onclick="saveProfile()" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Posts</span>
+                            <span class="stat-value" id="postCount">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Inscription</span>
+                            <span class="stat-value" id="memberSince">-</span>
+                        </div>
+                    </div>
+
+                    <div class="data-management">
+                        <h3>Gestion des données</h3>
+                        <button onclick="exportData()" class="btn btn-secondary">📥 Exporter mes données</button>
+                        <button onclick="importData()" class="btn btn-secondary">📤 Importer des données</button>
+                        <button onclick="exportFriendsData()" class="btn btn-secondary">🔗 Exporter liste amis</button>
+                    </div>
+                </div>
+
+                <!-- Onglet: Paramètres -->
+                <div id="settingsTab" class="tab-content hidden">
+                    <div class="settings-section">
+                        <h2>Paramètres</h2>
+                        
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="darkMode">
+                                Mode sombre
+                            </label>
+                        </div>
+
+                        <div class="setting-item">
+                            <label>URL Vidéo YouTube (ID ou full URL):</label>
+                            <input type="text" id="youtubeUrl" placeholder="ex: jNQXAC9IVRw">
+                            <button onclick="updateYoutubeVideo()" class="btn btn-small">Mise à jour</button>
+                        </div>
+
+                        <hr>
+
+                        <h3>À propos d'HYBOUCLIER</h3>
+                        <p>
+                            HYBOUCLIER est un réseau social citoyen qui respecte votre vie privée.
+                            Aucune donnée n'est collectée, tout fonctionne localement sur votre appareil.
+                        </p>
+                        <p>
+                            Version: <strong>0.1.0</strong> (Alpha Local-First)
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="storage.js"></script>
+    <script src="p2p.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
