@@ -1,3 +1,9 @@
-// HYBOUCLIER™ — Frontend minimal v0.2
+// HYBOUCLIER™ — Frontend bootstrap v0.3-dev
 
-console.log("HYBOUCLIER frontend loaded");
+import { initUI } from "./ui.js";
+
+console.log("HYBOUCLIER frontend starting…");
+
+const app = initUI();
+
+console.log("HYBOUCLIER is now running:", app);
