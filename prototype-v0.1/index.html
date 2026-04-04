@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="app">
+    <div class="site-banner">
+        <a class="site-link" href="../index.html" target="_blank">🌐 HYBOUCLIER - Site Hub</a>
+        <span>App locale | Écosystème minimaliste</span>
+    </div>
         <!-- Écran de bienvenue / Connexion -->
         <div id="authScreen" class="screen">
             <div class="auth-container">
@@ -169,6 +172,22 @@
                             <label>URL Vidéo YouTube (ID ou full URL):</label>
                             <input type="text" id="youtubeUrl" placeholder="ex: jNQXAC9IVRw">
                             <button onclick="updateYoutubeVideo()" class="btn btn-small">Mise à jour</button>
+                        </div>
+
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" disabled>
+                                Serveur local (désactivé)
+                            </label>
+                            <p class="setting-note">Option prête pour plus tard : aucun serveur n'est actif aujourd'hui.</p>
+                        </div>
+
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" disabled>
+                                Base de données (désactivée)
+                            </label>
+                            <p class="setting-note">Aucune base de données live pour l'instant, stockage local uniquement.</p>
                         </div>
 
                         <hr>

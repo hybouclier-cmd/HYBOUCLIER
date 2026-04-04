@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYBOUCLIER - Écosystème Local</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero-section">
+            <p class="eyebrow">HYBOUCLIER</p>
+            <h1>Écosystème site + app</h1>
+            <p class="hero-copy">Une vitrine web minimaliste qui oriente vers l’app locale HYBOUCLIER. Aucune base de données active, aucun serveur distant, seulement du stockage léger sur l’appareil.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="prototype-v0.1/index.html">Ouvrir l'app HYBOUCLIER</a>
+                <a class="btn btn-secondary" href="#details">Découvrir le hub</a>
+            </div>
+        </header>
+
+        <section class="ai-search-section">
+            <h2>HYBOU A.I.</h2>
+            <p class="ai-search-description">Recherche vocale accessible — Dites ce que vous cherchez</p>
+            <div class="search-bar-wrapper">
+                <div class="search-input-group">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="hybouSearch" 
+                        placeholder="Tapez ou utilisez la voix..." 
+                        aria-label="Barre de recherche HYBOU A.I."
+                    >
+                    <button 
+                        class="voice-button" 
+                        id="voiceButton" 
+                        aria-label="Activation recherche vocale"
+                        title="Cliquez pour utiliser la recherche vocale"
+                    >
+                        🎤
+                    </button>
+                </div>
+                <ul class="search-results" id="searchResults"></ul>
+            </div>
+        </section>
+
+        <section class="summary-grid" id="details">
+            <article>
+                <h2>Site minimaliste</h2>
+                <p>Le site web est un hub de présentation. Il utilise des liens externes et des vidéos YouTube/Vevo. Il ne stocke rien de lourd.</p>
+            </article>
+            <article>
+                <h2>App locale</h2>
+                <p>L’app HYBOUCLIER reste le cœur fonctionnel. Elle gère l'inscription, la connexion et le réseau social localement.</p>
+            </article>
+            <article>
+                <h2>Écosystème unifié</h2>
+                <p>Un identifiant unique local pour le moment. Plus tard, un serveur local et une base de données commune pourront être activés.</p>
+            </article>
+        </section>
+
+        <section class="media-section">
+            <h2>Vidéo de présentation</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="HYBOUCLIER - Présentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="links-section">
+            <h2>Liens externes</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube / Vevo</a></li>
+                <li><a href="https://forms.gle/" target="_blank" rel="noreferrer">Sondage externe (Google Forms)</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/R%C3%A9seau_social" target="_blank" rel="noreferrer">Informations citoyennes</a></li>
+            </ul>
+        </section>
+
+        <section class="polls-section">
+            <h2>Sondages</h2>
+            <ul>
+                <li><a href="https://forms.gle/" target="_blank" rel="noreferrer">Participer à un sondage citoyen</a></li>
+                <li><a href="https://www.surveymonkey.com/" target="_blank" rel="noreferrer">Voir des questions publiques</a></li>
+                <li><a href="https://framaforms.org/" target="_blank" rel="noreferrer">Créer un formulaire libre</a></li>
+            </ul>
+        </section>
+
+        <section class="testimonials-section">
+            <h2>Témoignages</h2>
+            <div class="testimonial-grid">
+                <article class="quote-card">
+                    <p>« HYBOUCLIER est une belle idée : un réseau citoyen qui reste local et privé. »</p>
+                    <span>— Utilisateur engagé</span>
+                </article>
+                <article class="quote-card">
+                    <p>« J'apprécie la simplicité et la clarté du site. Rien de lourd, tout est prêt à évoluer. »</p>
+                    <span>— Citoyen curieux</span>
+                </article>
+                <article class="quote-card">
+                    <p>« Le hub central me guide vers l'app sans confusion. Le modèle est cohérent. »</p>
+                    <span>— Observateur local</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="interviews-section">
+            <h2>Entrevues</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=ktr3HjgHo2Y" target="_blank" rel="noreferrer">Entrevue YouTube : innovation citoyenne</a></li>
+                <li><a href="https://www.youtube.com/watch?v=1G4isv_Fylg" target="_blank" rel="noreferrer">Vevo / vidéo inspirante</a></li>
+                <li><a href="https://www.youtube.com/watch?v=5qap5aO4i9A" target="_blank" rel="noreferrer">Discussion locale sur le numérique</a></li>
+            </ul>
+        </section>
+
+        <section class="help-links-section">
+            <h2>Liens d'aide</h2>
+            <ul>
+                <li><a href="https://support.google.com/drive/answer/2423492" target="_blank" rel="noreferrer">Comment gérer son stockage local</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage" target="_blank" rel="noreferrer">Comprendre localStorage</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/Confidentialit%C3%A9_des_donn%C3%A9es" target="_blank" rel="noreferrer">Bonnes pratiques de confidentialité</a></li>
+            </ul>
+        </section>
+
+        <section class="civic-ads-section">
+            <h2>Publicité citoyenne</h2>
+            <ul>
+                <li><a href="https://www.change.org/" target="_blank" rel="noreferrer">Campagnes citoyennes</a></li>
+                <li><a href="https://www.amnesty.org/fr/" target="_blank" rel="noreferrer">Actions publiques sans tracking</a></li>
+                <li><a href="https://www.ecologie.gouv.fr/" target="_blank" rel="noreferrer">Initiatives écologiques locales</a></li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>À propos</h2>
+            <p>HYBOUCLIER est un écosystème web et app conçu pour rester simple, léger et évolutif. Le site offre des ressources externes et oriente vers l'app locale qui gère l'inscription et la connexion sans serveur actif.</p>
+            <p>Le projet est préparé pour un futur serveur local et une future base de données, mais aujourd'hui tout est désactivé et fonctionne avec un stockage local minimal.</p>
+        </section>
+
+        <section class="status-section">
+            <h2>État actuel</h2>
+            <ul>
+                <li>Inscription / connexion active via stockage local.</li>
+                <li>Stockage léger local : localStorage + JSON.</li>
+                <li>Option Serveur Local : visible sur le site, désactivée.</li>
+                <li>Option Base de données : prête dans le code, désactivée.</li>
+                <li>Pas de collecte externe. Pas de cloud. Pas de serveur actif.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>HYBOUCLIER fonctionne comme un seul écosystème : le site présente, l'app réalise. Tout est prêt pour évoluer sans compromettre le modèle local-first.</p>
+        </footer>
+    </div>
+
+    <script>
+        // HYBOU A.I. Search and Voice Functionality
+        const searchInput = document.getElementById('hybouSearch');
+        const voiceButton = document.getElementById('voiceButton');
+        const searchResults = document.getElementById('searchResults');
+
+        // Site links database for search
+        const siteLinks = {
+            'youtube': { title: 'YouTube / Vevo', url: 'https://www.youtube.com/', category: 'Média' },
+            'sondage': { title: 'Google Forms - Sondage', url: 'https://forms.gle/', category: 'Engagement' },
+            'wikipédia': { title: 'Informations sur les réseaux sociaux', url: 'https://fr.wikipedia.org/wiki/R%C3%A9seau_social', category: 'Information' },
+            'citoyen': { title: 'Sondage citoyen', url: 'https://forms.gle/', category: 'Engagement' },
+            'survey': { title: 'Questions publiques', url: 'https://www.surveymonkey.com/', category: 'Sondage' },
+            'formulaire': { title: 'Créer un formulaire libre', url: 'https://framaforms.org/', category: 'Outils' },
+            'entrevue': { title: 'Entrevue YouTube', url: 'https://www.youtube.com/watch?v=ktr3HjgHo2Y', category: 'Média' },
+            'innovation': { title: 'Innovation citoyenne', url: 'https://www.youtube.com/watch?v=ktr3HjgHo2Y', category: 'Ressource' },
+            'vidéo': { title: 'Vevo - vidéo inspirante', url: 'https://www.youtube.com/watch?v=1G4isv_Fylg', category: 'Média' },
+            'numérique': { title: 'Discussion locale sur le numérique', url: 'https://www.youtube.com/watch?v=5qap5aO4i9A', category: 'Discussion' },
+            'stockage': { title: 'Gérer son stockage local', url: 'https://support.google.com/drive/answer/2423492', category: 'Aide' },
+            'localstorage': { title: 'Comprendre localStorage', url: 'https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage', category: 'Documentation' },
+            'confidentialité': { title: 'Bonnes pratiques de confidentialité', url: 'https://fr.wikipedia.org/wiki/Confidentialit%C3%A9_des_donn%C3%A9es', category: 'Sécurité' },
+            'campagne': { title: 'Campagnes citoyennes', url: 'https://www.change.org/', category: 'Engagement' },
+            'amnesty': { title: 'Actions publiques sans tracking', url: 'https://www.amnesty.org/fr/', category: 'Organisations' },
+            'écologie': { title: 'Initiatives écologiques locales', url: 'https://www.ecologie.gouv.fr/', category: 'Environnement' },
+            'app': { title: 'Ouvrir l\'app HYBOUCLIER', url: 'prototype-v0.1/index.html', category: 'Application' }
+        };
+
+        // Search function
+        function performSearch(query) {
+            const normalizedQuery = query.toLowerCase().trim();
+            
+            if (!normalizedQuery) {
+                searchResults.classList.remove('visible');
+                return;
+            }
+
+            const results = Object.values(siteLinks).filter(link => 
+                link.title.toLowerCase().includes(normalizedQuery) ||
+                link.category.toLowerCase().includes(normalizedQuery)
+            );
+
+            displayResults(results);
+        }
+
+        // Display search results
+        function displayResults(results) {
+            searchResults.innerHTML = '';
+            
+            if (results.length === 0) {
+                searchResults.classList.remove('visible');
+                return;
+            }
+
+            results.forEach(link => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${link.url}" target="_blank" rel="noreferrer">${link.title} <span style="color: #475569; font-size: 0.85rem;">(${link.category})</span></a>`;
+                searchResults.appendChild(li);
+            });
+
+            searchResults.classList.add('visible');
+        }
+
+        // Search input listener
+        searchInput.addEventListener('input', (e) => {
+            performSearch(e.target.value);
+        });
+
+        // Voice search functionality
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        
+        if (SpeechRecognition) {
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'fr-FR';
+            let isListening = false;
+
+            voiceButton.addEventListener('click', () => {
+                if (isListening) {
+                    recognition.stop();
+                    isListening = false;
+                    voiceButton.style.opacity = '1';
+                } else {
+                    searchInput.value = '';
+                    searchResults.classList.remove('visible');
+                    recognition.start();
+                    isListening = true;
+                    voiceButton.style.opacity = '0.5';
+                }
+            });
+
+            recognition.addEventListener('result', (event) => {
+                const transcript = Array.from(event.results)
+                    .map(result => result[0].transcript)
+                    .join('');
+                
+                searchInput.value = transcript;
+                performSearch(transcript);
+            });
+
+            recognition.addEventListener('end', () => {
+                isListening = false;
+                voiceButton.style.opacity = '1';
+            });
+
+            recognition.addEventListener('error', () => {
+                voiceButton.style.opacity = '1';
+            });
+        } else {
+            voiceButton.style.opacity = '0.5';
+            voiceButton.title = 'Recherche vocale non supportée dans votre navigateur';
+        }
+    </script>
+</body>
+</html>
