@@ -37,7 +37,7 @@ a:hover {
 }
 
 .hero-section {
-    background: var(--surface);
+    background: #d9d9d9; /* gris neutre myen */
     border: 1px solid var(--border);
     border-radius: 24px;
     padding: 40px 32px;
@@ -74,7 +74,7 @@ a:hover {
 }
 
 .ai-search-section {
-    background: var(--surface);
+    background: #d9d9d9; /* gris neutre myen */
     border: 1px solid var(--border);
     border-radius: 24px;
     padding: 32px;
@@ -197,17 +197,17 @@ a:hover {
 }
 
 .btn-primary {
-    background: var(--primary);
+    background: #d9d9d9; /* gris neutre myen */
     color: white;
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
+    background: #d9d9d9; /* gris neutre myen */
     transform: translateY(-1px);
 }
 
 .btn-secondary {
-    background: transparent;
+    background: #d9d9d9; /* gris neutre myen */
     color: var(--text);
     border: 1px solid var(--border);
 }
@@ -215,6 +215,29 @@ a:hover {
 .btn-secondary:hover {
     background: rgba(37, 99, 235, 0.08);
     transform: translateY(-1px);
+}
+
+/* --- HYBOUCLIER ICON SYSTEM --- */
+
+/* Gros HYBOU (bouton principal) */
+.hybou-main {
+    width: 48px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* HYBOU moyen (lien interne) */
+.hybou-medium {
+    width: 32px;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Petit HYBOU (lien externe) */
+.hybou-small {
+    width: 22px;
+    height: auto;
+    margin-right: 6px;
 }
 
 .summary-grid,
@@ -227,7 +250,7 @@ a:hover {
 }
 
 .quote-card {
-    background: var(--surface);
+    background: #d9d9d9; /* gris neutre myen */
     border: 1px solid var(--border);
     border-radius: 18px;
     padding: 24px;
@@ -248,7 +271,7 @@ a:hover {
 
 .summary-grid article,
 .resource-card {
-    background: var(--surface);
+    background: #d9d9d9; /* gris neutre myen */
     border: 1px solid var(--border);
     border-radius: 18px;
     padding: 24px;
